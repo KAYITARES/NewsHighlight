@@ -9,4 +9,12 @@
         <title>ome to the best News Website</title>
         {% endif %}
     </head>
+    <body>
+        <h3>popular news</h3>
+        <ul>
+            {% for popular_newz in popular %}
+            <li>{{ popular_newz.title}}</li>
+            {% endfor%}
+        </ul>
+    </body>
 </html>
