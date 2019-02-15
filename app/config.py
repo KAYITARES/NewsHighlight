@@ -20,4 +20,10 @@ class DevConfig(Config):
         Config: The parent configuration class with General configuration settings
     ''' 
     DEBUG = True  
+class Config:
+    '''
+    General configuration parent class
+    '''
+    NEWZ_API_BASE_URL = '
+https://newsapi.org/v2/everything?q=bitcoin&from=2019-01-15&sortBy=publishedAt&apiKey=ad1be185a56b4f8290567e6ac2dc92c6'
     
