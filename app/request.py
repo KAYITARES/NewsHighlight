@@ -6,9 +6,10 @@ Source = source.Source
 Newz = newz.Newz
 
 # # getting api key
-# api_key = app.config['NEWZ_API_KEY']
-# # getting the movie base url
-# base_url = app.config["NEWZ_API_BASE_URL"]
+api_key = app.config['NEWZ_API_KEY']
+# # getting the news base url
+base_url = app.config["NEWZ_API_BASE_URL"]
+api_key = app.config['SOURCE_API_BASE_URL']
 # def get_news(category):
 #     '''
 #     Function that gets the json response to our url request
