@@ -17,11 +17,11 @@ def index():
 
 # Getting popular news
 
-    return render_template('index.html', title = title, popular = popular_news)
+    return render_template('index.html', title = title, general = general_category, sport = sport_category, business =  business_category, entertainement = entertainement_category,technology =  technology_category  )
 
-@app.route('/source/<source_id>')
-def source(source_id):
+@app.route('/source/<source_name>')
+def source(source_name):
     '''
     view source page function that returns the nsource details page and its data.
     '''
-    return render_template('source.html',id=source_id)
+    return render_template('source.html',id=source_name)
