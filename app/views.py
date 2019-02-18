@@ -1,6 +1,7 @@
 from flask import render_template
 from app import app
 from .request import get_source
+from .request import get_newz
 #Views
 @app.route('/')
 def index():
@@ -16,9 +17,21 @@ def index():
     title = 'NEWS'
 # Getting popular news
     return render_template('index.html', title = title, general = general_category, sports = sport_category, business =  business_category, entertainment = entertainement_category,technology =  technology_category  )
-@app.route('/source/<source_name>')
-def source(source_name):
+
+# @app.route('/source/<source_name>')
+# def source(source_name):
+#     '''
+#     view source page function that returns the nsource details page and its data.
+#     '''
+#     return render_template('source.html',id=source_name)
+
+@app.route('/newz/<id>')
+def newz(id):
+
     '''
-    view source page function that returns the nsource details page and its data.
+    View movie page function that returns the movie details page and its data
     '''
-    return render_template('source.html',id=source_name)
+    newz = get_newz(id)
+    title = f'{id}'
+
+    return render_template('newz.html',title = title,newz = newz)
