@@ -1,4 +1,5 @@
 from app import app
+import urllib.request,json
 # getting api key
 api_key = app.config['NEWZ_API_KEY']
 # getting the movie base url
