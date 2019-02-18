@@ -8,23 +8,23 @@ Newz = newz.Newz
 # getting api key
 api_key = app.config['NEWZ_API_KEY']
 # getting the news base url
-base_url = app.config["NEWZ_API_BASE_URL"]
-base_url1 = app.config['SOURCE_API_BASE_URL']
 
-def get_news(category):
+base_url = app.config['SOURCE_API_BASE_URL']
+
+def get_source(category):
     '''
- Function that gets the json response to our url request
+    Function that gets the json response to our url request
     '''
-    get_news_url = base_url.format(category,api_key)
-    with urllib.request.urlopen(get_news_url) as url:
-        get_news_data = url.read()
-        get_news_response = json.loads(get_news_data)
-        newz_results = get_news_response
-        if get_news_response['results']:
-            newz_results_list = get_news_response['results']
-            newz_results = process_results(newz_results_list)
-            return newz_results
-def process_results(newz_list):
+    get_source_url = base_url.format(category,api_key)
+    with urllib.request.urlopen(get_source_url) as url:
+        get_source_data = url.read()
+        get_source_response = json.loads(get_source_data)
+        source_results = get_source_response
+        if get_source_response['sources']:
+            source_results_list = get_source_response['sources']
+            source_results = process_result(source_results_list)
+    return source_results
+def process_result(source_list):
     '''
     Function that processes the newz result and transform them to a list of objects
     
@@ -33,17 +33,13 @@ def process_results(newz_list):
     Returns:
        newz_results:A list of objects
     '''
-    newz_results =[]
-    for newz_item in newz_list:
+    source_results =[]
+    for source_item in source_list:
        
-        author = newz_item.get('author')
-        title = newz_item.get('title')
-        description = newz_item.get('description')
-        url = newz_item.get('url')
-        urlToImage = newz_item.get('image')
-        publishedAt = newz_item.get('published')
-        content = newz_item.get('content')
+        id = source_item.get('id')
+        name = source_item.get('name')
+        description = source_item.get('description')
         if source:
-            newz_object = Newz(source,author,title,description,url,urlToImage,publishedAt,content)
-            newz_results.append(newz_object)
-    return newz_results
+            source_object = Source(id,name,description)
+            source_results.append(source_object)
+    return source_results

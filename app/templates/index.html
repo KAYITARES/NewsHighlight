@@ -10,11 +10,29 @@
         {% endif %}
     </head>
     <body>
-        <h3>popular news</h3>
+        <h1>WELCOME TO NEWS HIGHLIGHT</h1>
         <ul>
-            {% for popular_newz in popular %}
-            <li>{{ popular_newz.title}}</li>
+            <h4>GENERAL</h4>
+            {% for source in general %}
+            <li>{{ source.name }}</li>
             {% endfor%}
+            <h4>BUSINESS</h4>
+            {% for source in business %}
+            <li>{{ source.name }}</li>
+            {% endfor%}
+            <h4>SPORTS</h4>
+            {% for source in sports %}
+            <li>{{ source.name }}</li>
+            {% endfor%}
+            <h4>ENTERTAINMENT</h4>
+            {% for source in entertainment %}
+            <li>{{ source.name }}</li>
+            {% endfor%}
+            <h4>TECHNOLOGY</h4>
+            {% for source in technology %}
+            <li>{{ source.name }}</li>
+            {% endfor%}
+
         </ul>
     </body>
 </html>
