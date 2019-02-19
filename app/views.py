@@ -1,7 +1,7 @@
 from flask import render_template
 from app import app
-from .request import get_source
-from .request import get_newz
+from .request import get_source, get_newz
+
 #Views
 @app.route('/')
 def index():
@@ -32,6 +32,6 @@ def newz(id):
     View movie page function that returns the movie details page and its data
     '''
     newz = get_newz(id)
-    title = f'{id}'
+    title = id
 
-    return render_template('newz.html',title = title,newz = newz)
+    return render_template('newz.html', title = title, newz = newz)

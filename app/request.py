@@ -57,24 +57,24 @@ def get_newz(id):
                 newz_results=process_newz(newz_results_list)
     return newz_results
 def process_newz(newz_list):
-                     '''
-                     Function  that processes the news result and transform them to a list of Objects
-                     Args:
-                     newz_list: A list of dictionaries that contain news details
-                     Returns :
-                     news_results: A list of articles objects
-                      '''
-                     newz_results=[]
-                     for article in newz_list:
-                          author=article.get('author')
-                          title=article.get('title')
-                          description=article.get('description')
-                          url=article.get('url')
-                          imageUrl=article.get('urlToImage')
-                          publishedAt=article.get("publishedAt")
-                          content=article.get('content')
+    '''
+    Function  that processes the news result and transform them to a list of Objects
+    Args:
+    newz_list: A list of dictionaries that contain news details
+    Returns :
+    news_results: A list of articles objects
+    '''
+    newz_results=[]
+    for article in newz_list:
+        author=article.get('author')
+        title=article.get('title')
+        description=article.get('description')
+        url=article.get('url')
+        imageUrl=article.get('urlToImage')
+        publishedAt=article.get("publishedAt")
+        content=article.get('content')
 
-                          if imageUrl:
-                              article_object=Newz(author,title,description,url,imageUrl,publishedAt,content)
-                              newz_results.append(article_object)
-                     return newz_results 
+        if imageUrl:
+            article_object=Newz(author,title,description,url,imageUrl,publishedAt,content)
+            newz_results.append(article_object)
+    return newz_results 
