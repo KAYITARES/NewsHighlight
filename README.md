@@ -1,10 +1,10 @@
-##NEWS HIGHLIGHT
+## NEWS HIGHLIGHT
 
 News Highlight is a  web application that provide different News source
 
 ## created by Cynthia.K, 19th,Feb,2019
 
-##Description 
+## Description 
 News highlight is a web application  that user can view previews articles from different sources.the user can either choose to see news from one sources,user can also see the date, image and description of the news.where the date is the time the news was posted. can read a full articles from the source
 
 ## Setup/Installations
