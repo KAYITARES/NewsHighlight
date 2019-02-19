@@ -1,10 +1,25 @@
-h1{
+body{
+    background-image:url(https://images.pexels.com/photos/1056549/pexels-photo-1056549.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+   
+}
+/* h1{
     color:skyblue;
     background-color:beige;
     height:300px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     padding-top:80px;
-    font-size: 70px;
+    font-size: 70px; */
   }
+  /* .hh{
+      width:300px;
+  }
+   */
+   h2{
+       color:cyan;
+   }
+   .single-source{
+    padding: 0 !important;
+    margin: 0 !important;
+   }
   

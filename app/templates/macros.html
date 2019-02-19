@@ -1,19 +1,23 @@
 {% macro displaySourceList(source_list) %}
    {% for source in source_list %}
-   <div class="col-md-3 single-source">
-        <div class="row">
-            <div class="col-md-4 source-name"> 
-      <h3>{{ source.name }}</h3>
+   <div class="col-md-3  single-source">
+        <div class="row hh">
+            <div class="col-md-6  source-name  "> 
+                <div class="panel panel-default">
+                <div class="panel-heading">
+      <h4>{{ source.name }}</h4><br>
+    </div>
+    <div class="panel-body">
+      {{source.description|truncate(150)}}<br>
       </div>
-      <div class="col-md-7 source-details">
-            <p> {{source.description|truncate(150)}}
-                <br>
-                <a href="/newz/{{source.id}}">Read Articles</a>
-            </p>            
-        </div>
+      <div class="panel-footer">
+      <a href="/newz/{{source.id}}">Read Articles</a>
+      </div>
+      <br>
+      </div>
     </div>
 </div>
-          
+</div>       
     {% endfor %}
 {% endmacro%}
 
