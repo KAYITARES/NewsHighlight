@@ -12,7 +12,7 @@ class NewzTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_newz = Newz('Sys-con.com','Cryptohopper Just Hit 100k Users on Their Trading Platform',"http://businesswire.sys-con.com/node/4376242",'Cryptohopper just announced that it hit 100k users on their trading platform. In little over a year and a half, this staggering amount of people have joined the platform, enticed by the promise to invest completely automatically. When you sign up and configur…',null,2019-02-15T14:03:04Z,'Cryptohopper just announced that it hit 100k users on their trading \r\n platform. In little over a year and a half, this staggering amount of \r\n people have joined the platform, enticed by the promise to invest \r\n completely automatically. When you sign up and… ')
+        self.new_newz = Newz("one","Cryptohopper Just Hit 100k Users on Their Trading Platform","http://businesswire.sys-con.com/node/4376242","ear and t completely automatically. When you sign up and configur…","pa","gekohwgoeg","Cryptohopper just announced that it hit 100k users on their trading ")
     def test_instance(self):
         self.assertTrue(isinstance(self.new_newz,Newz))
 if __name__=='__main__':
